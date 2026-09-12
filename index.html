@@ -183,7 +183,7 @@
   }
   .nav-produtos > a::before {
     content: '▾';
-    font-size: 0.7em;
+    font-size: 1.5em;
     transition: transform 0.25s;
     order: 2;
   }
@@ -224,7 +224,7 @@
     display: block;
     padding: clamp(6px, 0.7vw, 10px) clamp(14px, 1.6vw, 22px);
     font-family: 'Inter', sans-serif;
-    font-size: clamp(0.62rem, 0.3vw + 0.5rem, 0.78rem);
+    font-size: clamp(0.4rem, 0.3vw + 0.5rem, 0.8rem);
     letter-spacing: clamp(0.4px, 0.12vw, 1.2px);
     text-transform: uppercase;
     color: var(--branco);
@@ -1259,14 +1259,16 @@
     }
     .dropdown-produtos {
       top: calc(100% + 6px);
-      left: 0;
+      left: 50%;
       right: auto;
-      transform: translateX(0) translateY(-6px);
-      min-width: 150px;
-      max-width: calc(100vw - 24px);
+      transform: translateX(-50%) translateY(-6px);
+      min-width: 0;
+      width: max-content;
+      max-width: calc(100vw - 32px);
+      padding: 4px 0;
     }
-    .dropdown-produtos::before { left: 16px; transform: rotate(45deg); }
-    .nav-produtos.aberto .dropdown-produtos { transform: translateX(0) translateY(0); }
+    .dropdown-produtos::before { left: 50%; right: auto; transform: translateX(-50%) rotate(45deg); }
+    .nav-produtos.aberto .dropdown-produtos { transform: translateX(-50%) translateY(0); }
 
     .hero-botoes { flex-direction: column; align-items: center; }
     .btn-primario, .btn-secundario { width: 100%; }

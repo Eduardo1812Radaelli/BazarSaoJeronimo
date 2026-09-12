@@ -1126,7 +1126,6 @@
     .hero-inner { grid-template-columns: 1fr; gap: 40px; }
     .hero { padding: 70px 24px 90px; }
     .hero h1 { font-size: 2.8rem; }
-    .hero-estrela-grande { display: none; }
     .sobre-grid { grid-template-columns: 1fr; gap: 30px; }
     .sobre h2 { font-size: 2.1rem; }
     .cta-contato h2 { font-size: 2.1rem; }
@@ -1135,6 +1134,25 @@
     .diferenciais-inner { grid-template-columns: repeat(2, 1fr); }
     .diferencial { border-right: 1px solid rgba(212,163,57,0.15); border-bottom: 1px solid rgba(212,163,57,0.15); }
     .diferencial:nth-child(2n) { border-right: none; }
+
+    .hero-estrela-grande {
+      display: flex;
+      min-height: 0;
+      order: 2;
+      margin-top: 30px;
+    }
+    .hero-estrela-grande svg {
+      width: 200px;
+      height: 200px;
+    }
+    .hero-estrela-grande::before {
+      width: 260px;
+      height: 260px;
+    }
+    .hero-estrela-grande::after {
+      width: 320px;
+      height: 320px;
+    }
   }
 
   @media (max-width: 720px) {
@@ -1232,6 +1250,22 @@
       letter-spacing: 1.5px;
     }
     .scroll-indicador { display: none; }
+
+    .hero-estrela-grande {
+      margin-top: 26px;
+    }
+    .hero-estrela-grande svg {
+      width: 170px;
+      height: 170px;
+    }
+    .hero-estrela-grande::before {
+      width: 220px;
+      height: 220px;
+    }
+    .hero-estrela-grande::after {
+      width: 280px;
+      height: 280px;
+    }
 
     main { padding: 55px 18px 70px; }
     .bloco { margin-bottom: 70px; }
